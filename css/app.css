@@ -854,6 +854,9 @@ input {
     display: none;
   }
 }
+.awards__mobile {
+  display: none;
+}
 .awards__mobile > ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -904,6 +907,11 @@ input {
   max-width: 175px;
   font-size: 13px;
   line-height: 18px;
+}
+@media (max-width: 768px) {
+  .awards__mobile {
+    display: block;
+  }
 }
 @media (max-width: 1024px) {
   .awards {
