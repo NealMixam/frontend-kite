@@ -778,24 +778,179 @@ input {
   }
 }
 
-.awards {
-  padding: 140px 30px;
-  color: #1D1D1D;
-  overflow: scroll;
-}
-.awards__list {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.map .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 172px;
 }
-.awards__list li {
+@media (max-width: 1200px) {
+  .map .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.map__left {
+  position: relative;
+  max-width: 965px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.map__left img {
+  width: 100%;
+}
+.map__left p {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  max-width: 345px;
+}
+.map__right {
+  position: relative;
+  font-family: "Manrope-Regular";
+  padding: 0 30px;
+}
+.map__right img {
+  margin-bottom: 20px;
+}
+.map__right::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 379px;
+  background-color: #303030;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.map .animated-circles {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.map .animated-circles::before {
+  display: block;
+  width: 6px;
+  height: 6px;
+  content: "";
+  background-color: #E95414;
+  border-radius: 50%;
+}
+.map .animated-circles__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #E95414;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+.map .animated-circles__circle._first {
+  -webkit-animation: scale-circle 3s linear infinite;
+          animation: scale-circle 3s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.map .animated-circles__circle._second {
+  -webkit-animation: scale-circle 3s linear infinite;
+          animation: scale-circle 3s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.map .animated-circles__circle._third {
+  -webkit-animation: scale-circle 3s linear infinite;
+          animation: scale-circle 3s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+@-webkit-keyframes scale-circle {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  15% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3.26);
+            transform: scale(3.26);
+  }
+}
+@keyframes scale-circle {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  15% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3.26);
+            transform: scale(3.26);
+  }
+}
+.map .animated-circles {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.map .animated-circles:nth-of-type(1) {
+  top: 81px;
+  left: 150px;
+}
+.map .animated-circles:nth-of-type(2) {
+  top: 170px;
+  left: 130px;
+}
+.map .animated-circles:nth-of-type(3) {
+  top: 253px;
+  left: 254px;
+}
+.map .animated-circles:nth-of-type(4) {
+  top: 90px;
+  left: 430px;
+}
+.map .animated-circles:nth-of-type(5) {
+  top: 159px;
+  left: 544px;
+}
+.map .animated-circles:nth-of-type(6) {
+  top: 91px;
+  left: 590px;
+}
+.map .animated-circles:nth-of-type(7) {
+  top: 50px;
+  left: 667px;
+}
+.map .animated-circles:nth-of-type(8) {
+  top: 132px;
+  left: 681px;
+}
+
+.awards {
+  padding: 140px 30px;
+  color: #1D1D1D;
+}
+.awards__list .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -810,22 +965,22 @@ input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.awards__list li div:nth-child(1) {
+.awards__list .swiper-slide div:nth-child(1) {
   padding: 40px 40px 20px;
   background-color: #EAFEDA;
   border-radius: 40px;
 }
-.awards__list li div:nth-child(1) span {
+.awards__list .swiper-slide div:nth-child(1) span {
   display: block;
   font-size: 160px;
   line-height: 100%;
   text-align: center;
 }
-.awards__list li div:nth-child(1) p {
+.awards__list .swiper-slide div:nth-child(1) p {
   font-size: 14px;
   line-height: 22px;
 }
-.awards__list li div:nth-child(2) {
+.awards__list .swiper-slide div:nth-child(2) {
   width: 238px;
   position: relative;
   display: -webkit-box;
@@ -839,7 +994,7 @@ input {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.awards__list li div:nth-child(2)::before {
+.awards__list .swiper-slide div:nth-child(2)::before {
   position: absolute;
   top: 50px;
   left: 0;
