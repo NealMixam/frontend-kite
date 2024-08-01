@@ -6,74 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="icon" href="favicon.ico"><script defer src="js/app.js"></script><link href="css/app.css" rel="stylesheet"></head>
   <body>
-    <header class="header">
-      <div class="container">
-        <a href="#main" class="logo header__logo">
-          <img src="images/content/logo--white.svg" alt="Термокомплекс" />
-        </a>
-        <div class="burger-menu" id="header-burger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <nav class="header__nav nav nav-menu navigation" id="header-nav">
-          <ul>
-            <li>
-              <a href="#products">Агентство</a>
-            </li>
-            <li>
-              <a href="#features">Услуги</a>
-            </li>
-            <li>
-              <a href="#use">Кейсы</a>
-            </li>
-            <li>
-              <a href="#objects">Вакансии</a>
-            </li>
-            <li>
-              <a href="#reviews">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="header__buttons">
+    <header class="header container">
+      <a href="#main" class="logo header__logo">
+        <img src="images/content/logo--white.svg" alt="Термокомплекс" />
+      </a>
+      <!-- <div class="burger-menu" id="header-burger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div> -->
+      <nav class="header__nav nav nav-menu navigation" id="header-nav">
+        <ul>
           <li>
-            <a class="button button--gray" href="">Написать нам в Telegram</a>
+            <a href="#products">Агентство</a>
           </li>
           <li>
-            <a class="button button--orange" href="tel:+74951491839" class="phone phone--header">Оставить заявку</a>
+            <a href="#features">Услуги</a>
+          </li>
+          <li>
+            <a href="#use">Кейсы</a>
+          </li>
+          <li>
+            <a href="#objects">Вакансии</a>
+          </li>
+          <li>
+            <a href="#reviews">Контакты</a>
           </li>
         </ul>
-        <div id="burger-menu">
-          <span></span>
-        </div>
-        <div id="menu" class="navigation">
-          <ul>
-            <li>
-              <a href="#products">Продукция</a>
-            </li>
-            <li>
-              <a href="#features">Преимущества</a>
-            </li>
-            <li>
-              <a href="#use">Применение</a>
-            </li>
-            <li>
-              <a href="#objects">Объекты</a>
-            </li>
-            <li>
-              <a href="#reviews">Отзывы</a>
-            </li>
-            <li>
-              <a href="#map">Контакты</a>
-            </li>
-          </ul>
-          <a href="+79776507822">+7 (977) 650–78–22</a>
-        </div>
+      </nav>
+      <ul class="header__buttons">
+        <li>
+          <a class="button button--gray" href="">Написать нам в Telegram</a>
+        </li>
+        <li>
+          <a class="button button--orange" href="tel:+74951491839" class="phone phone--header">Оставить заявку</a>
+        </li>
+      </ul>
+      <div id="burger-menu"></div>
+      <div id="menu" class="navigation">
+        <ul>
+          <li>
+            <a href="#products">Продукция</a>
+          </li>
+          <li>
+            <a href="#features">Преимущества</a>
+          </li>
+          <li>
+            <a href="#use">Применение</a>
+          </li>
+          <li>
+            <a href="#objects">Объекты</a>
+          </li>
+          <li>
+            <a href="#reviews">Отзывы</a>
+          </li>
+          <li>
+            <a href="#map">Контакты</a>
+          </li>
+        </ul>
+        <a href="+79776507822">+7 (977) 650–78–22</a>
       </div>
     </header>
     <section class="hero container" id="main">
       <div class="hero__top">
-        <h1 class="hero__title">Решаем <span>сложные</span> SEO-задачи для среднего и крупного бизнеса</h1>
+        <h1 class="hero__title">
+          Решаем <span>сложные</span><br />SEO-задачи для&#160;среднего и&#160;крупного бизнеса
+        </h1>
       </div>
       <div class="hero__main">
         <ul>
@@ -81,13 +79,13 @@
             <div>
               <img src="images/content/number__2.svg" alt="" />
             </div>
-            <p>№2 в категории SEO для сайтов с высокой посещаемостью 2022</p>
+            <p>№2 в&#160;категории SEO для сайтов с&#160;высокой посещаемостью 2022</p>
           </li>
           <li>
             <div>
               <img src="images/content/number__8.svg" alt="" />
             </div>
-            <p>№8 в общем рейтинге агентств 2023</p>
+            <p>№8 в&#160;общем рейтинге<br />агентств 2023</p>
           </li>
         </ul>
         <div>
@@ -102,7 +100,7 @@
         <div class="services__top">
           <h2>Услуги</h2>
           <p>Более 15 лет экспертизы и опыта со специализацией на продуктовом подходе к SEO</p>
-          <div class="services__people">
+          <div class="services__people services__people--1">
             <img src="images/content/people__image.png" alt="Наши специалисты" />
             <p>
               Эксперты Kite — практики: работали с лидерами или второй корзиной после лидеров, почти в каждой из
@@ -115,43 +113,178 @@
             <li>
               <p><span>SEO</span></p>
               <ul>
-                <li>Аудит и поиск точек кратного роста</li>
-                <li>SEO-продвижение</li>
-                <li>Сопровождение запуска нового сайта</li>
-                <li>Поддержка при редизайне или смене CMS</li>
+                <li>
+                  Аудит и поиск точек кратного роста
+                  <div></div>
+                </li>
+                <li>
+                  SEO-продвижение
+                  <div></div>
+                </li>
+                <li>
+                  Сопровождение запуска нового сайта
+                  <div></div>
+                </li>
+                <li>
+                  Поддержка при редизайне или смене CMS
+                  <div></div>
+                </li>
               </ul>
               <img src="images/content/kite.svg" alt="" />
             </li>
             <li>
               <p><span>Контент</span></p>
               <ul>
-                <li>Бренд-медиа под ключ</li>
-                <li>Разработка контент-стратегии</li>
-                <li>Разработка дизайна и вёрстки на WordPress и Tilda</li>
-                <li>Написание экспертных статей, кейсов, описания для лендингов, постов для соц.сетей</li>
-                <li>Обучение специалистов по контент-маркетингу</li>
+                <li>
+                  Бренд-медиа под ключ
+                  <div></div>
+                </li>
+                <li>
+                  Разработка контент-стратегии
+                  <div></div>
+                </li>
+                <li>
+                  Разработка дизайна и вёрстки на WordPress и Tilda
+                  <div></div>
+                </li>
+                <li>
+                  Написание экспертных статей, кейсов, описания для лендингов, постов для соц.сетей
+                  <div></div>
+                </li>
+                <li>
+                  Обучение специалистов по контент-маркетингу
+                  <div></div>
+                </li>
               </ul>
               <img src="images/content/glider.svg" alt="" />
             </li>
             <li>
               <p><span>Аналитика</span></p>
               <ul>
-                <li>Разработка кастомных отчетов, исходя из особенностей продукта</li>
-                <li>Настройка систем метрик и панелей вебмастеров</li>
+                <li>
+                  Разработка кастомных отчетов, исходя из особенностей продукта
+                  <div></div>
+                </li>
+                <li>
+                  Настройка систем метрик и панелей вебмастеров
+                  <div></div>
+                </li>
               </ul>
               <img src="images/content/kite.svg" alt="" />
             </li>
             <li>
               <p><span>Разработка</span></p>
               <ul>
-                <li>Проектирование UI/UX</li>
-                <li>Разработка Frontend/Backend</li>
-                <li>Настройка серверного окружения, обслуживание и развитие проктов</li>
+                <li>
+                  Проектирование UI/UX
+                  <div></div>
+                </li>
+                <li>
+                  Разработка Frontend/Backend
+                  <div></div>
+                </li>
+                <li>
+                  Настройка серверного окружения, обслуживание и развитие проктов
+                  <div></div>
+                </li>
               </ul>
               <img src="images/content/kata.svg" alt="" />
             </li>
           </ul>
+          <div class="tabs-container">
+            <div class="tabs">
+              <button class="tab-button active" data-tab="tab1">SEO</button>
+              <button class="tab-button" data-tab="tab2">Контент</button>
+              <button class="tab-button" data-tab="tab3">Аналитика</button>
+              <button class="tab-button" data-tab="tab4">Разработка</button>
+            </div>
+            <div class="tab-content">
+              <div class="tab-panel active" id="tab1">
+                <img src="images/content/kite.svg" alt="" width="82" height="40" />
+                <ul>
+                  <li>
+                    Аудит и поиск точек кратного роста
+                    <div></div>
+                  </li>
+                  <li>
+                    SEO-продвижение
+                    <div></div>
+                  </li>
+                  <li>
+                    Сопровождение запуска нового сайта
+                    <div></div>
+                  </li>
+                  <li>
+                    Поддержка при редизайне или смене CMS
+                    <div></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-panel" id="tab2">
+                <img src="images/content/glider.svg" alt="" width="82" height="40" />
+                <ul>
+                  <li>
+                    Бренд-медиа под ключ
+                    <div></div>
+                  </li>
+                  <li>
+                    Разработка контент-стратегии
+                    <div></div>
+                  </li>
+                  <li>
+                    Разработка дизайна и вёрстки на WordPress и Tilda
+                    <div></div>
+                  </li>
+                  <li>
+                    Написание экспертных статей, кейсов, описания для лендингов, постов для соц.сетей
+                    <div></div>
+                  </li>
+                  <li>
+                    Обучение специалистов по контент-маркетингу
+                    <div></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-panel" id="tab3">
+                <img src="images/content/kite.svg" alt="" width="82" height="40" />
+                <ul>
+                  <li>
+                    Разработка кастомных отчетов, исходя из особенностей продукта
+                    <div></div>
+                  </li>
+                  <li>
+                    Настройка систем метрик и панелей вебмастеров
+                    <div></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-panel" id="tab4">
+                <img src="images/content/kata.svg" alt="" width="82" height="40" />
+                <ul>
+                  <li>
+                    Проектирование UI/UX
+                    <div></div>
+                  </li>
+                  <li>
+                    Разработка Frontend/Backend
+                    <div></div>
+                  </li>
+                  <li>
+                    Настройка серверного окружения, обслуживание и развитие проктов
+                    <div></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <a href="" class="button button--orange services__button">Обсудить проект</a>
+          <div class="services__people services__people--2">
+            <img src="images/content/people__image.png" alt="Наши специалисты" />
+            <p>
+              Эксперты Kite — практики: работали с лидерами или второй корзиной после лидеров, почти в каждой из
+              категорий бизнеса.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -269,102 +402,92 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
-      <div class="container">
-        <div class="reviews__top">
-          <h2>Клиенты говорят</h2>
-          <div>
-            <p>Проактивный системный подход, прозрачность и экспертизу подкрепляем доверием клиентов</p>
-            <p>Основа наших отношений с клиентами — взаимное доверие</p>
-          </div>
+    <section class="reviews container">
+      <div class="reviews__top">
+        <h2>Клиенты говорят</h2>
+        <div>
+          <p>Проактивный системный подход, прозрачность и экспертизу подкрепляем доверием клиентов</p>
+          <p>Основа наших отношений с клиентами — взаимное доверие</p>
         </div>
-        <div class="reviews__wrapper">
-          <div class="reviews-swiper-1">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="images/content/t-bank.svg" alt="" />
+      </div>
+      <div class="reviews__wrapper">
+        <div class="reviews-swiper-1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/content/t-bank.svg" alt="" />
+                <p>Как мы в <br /><span>5 раз</span><br />увеличили количество пользователей для Тинькофф Инвестиций</p>
+                <img src="images/content/reviews__image--1.svg" alt="" />
+                <a href="">Смотреть кейс</a>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/content/tripster.svg" alt="" />
+                <p>
+                  <span>190%+</span><br />трафика за 2 года в условиях пандемии, санкций, нескромного курса и
+                  закрывающихся границ
+                </p>
+                <img src="images/content/reviews__image--2.png" alt="" />
+                <a href="">Смотреть кейс</a>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/content/t-bank.svg" alt="" />
+                <p>Как мы в <br /><span>5 раз</span><br />увеличили количество пользователей для Тинькофф Инвестиций</p>
+                <img src="images/content/reviews__image--1.svg" alt="" />
+                <a href="">Смотреть кейс</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="reviews-swiper-2">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide__content">
+                  <p>Мы работаем с командой kite. больше года и очень благодарны им за приятный опыт сотрудничества</p>
                   <p>
-                    Как мы в <br /><span>5 раз</span><br />увеличили количество пользователей для Тинькофф Инвестиций
+                    Мы пришли к отличным результатам, благодаря высокой экспертизе kite., их вовлеченности, погружению в
+                    наши продукты и ответственности по выполнению KPI.
                   </p>
-                  <img src="images/content/reviews__image--1.svg" alt="" />
-                  <a href="">Смотреть кейс</a>
                 </div>
-                <div class="swiper-slide">
-                  <img src="images/content/tripster.svg" alt="" />
-                  <p>
-                    <span>190%+</span><br />трафика за 2 года в условиях пандемии, санкций, нескромного курса и
-                    закрывающихся границ
-                  </p>
-                  <img src="images/content/reviews__image--2.png" alt="" />
-                  <a href="">Смотреть кейс</a>
+                <div class="swiper-slide__info">
+                  <div>
+                    <img src="images/content/reviews__avatar--1.png" alt="" />
+                    <div>
+                      <p>Иван Лёпа</p>
+                      <p>Маркетолог в Тинькофф ИнвестицииА</p>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="">Больше отзывов</a>
+                  </div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="images/content/t-bank.svg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide__content">
+                  <p>Мы работаем с командой kite. больше года и очень благодарны им за приятный опыт сотрудничества</p>
                   <p>
-                    Как мы в <br /><span>5 раз</span><br />увеличили количество пользователей для Тинькофф Инвестиций
+                    Мы пришли к отличным результатам, благодаря высокой экспертизе kite., их вовлеченности, погружению в
+                    наши продукты и ответственности по выполнению KPI.
                   </p>
-                  <img src="images/content/reviews__image--1.svg" alt="" />
-                  <a href="">Смотреть кейс</a>
+                </div>
+                <div class="swiper-slide__info">
+                  <div>
+                    <img src="images/content/reviews__avatar--1.png" alt="" />
+                    <div>
+                      <p>Иван Лёпа</p>
+                      <p>Маркетолог в Тинькофф ИнвестицииА</p>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="">Больше отзывов</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-          <div class="reviews-swiper-2">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="swiper-slide__content">
-                    <p>
-                      Мы работаем с командой kite. больше года и очень благодарны им за приятный опыт сотрудничества
-                    </p>
-                    <p>
-                      Мы пришли к отличным результатам, благодаря высокой экспертизе kite., их вовлеченности, погружению
-                      в наши продукты и ответственности по выполнению KPI.
-                    </p>
-                  </div>
-                  <div class="swiper-slide__info">
-                    <div>
-                      <img src="images/content/reviews__avatar--1.png" alt="" />
-                      <div>
-                        <p>Иван Лёпа</p>
-                        <p>Маркетолог в Тинькофф ИнвестицииА</p>
-                      </div>
-                    </div>
-                    <div>
-                      <a href="">Больше отзывов</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-slide__content">
-                    <p>
-                      Мы работаем с командой kite. больше года и очень благодарны им за приятный опыт сотрудничества
-                    </p>
-                    <p>
-                      Мы пришли к отличным результатам, благодаря высокой экспертизе kite., их вовлеченности, погружению
-                      в наши продукты и ответственности по выполнению KPI.
-                    </p>
-                  </div>
-                  <div class="swiper-slide__info">
-                    <div>
-                      <img src="images/content/reviews__avatar--1.png" alt="" />
-                      <div>
-                        <p>Иван Лёпа</p>
-                        <p>Маркетолог в Тинькофф ИнвестицииА</p>
-                      </div>
-                    </div>
-                    <div>
-                      <a href="">Больше отзывов</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-controls">
-                <div class="swiper-button-prev swiper-button"></div>
-                <div class="swiper-button-next swiper-button"></div>
-              </div>
+            <div class="swiper-controls">
+              <div class="swiper-button-prev swiper-button"></div>
+              <div class="swiper-button-next swiper-button"></div>
             </div>
           </div>
         </div>
@@ -373,13 +496,15 @@
     <section class="partners">
       <div class="marquee">
         <div class="marquee-inner">
-          <ul>
+          <ul class="marquee-content">
             <li><img src="images/content/tinkoff.svg" alt="Т-Банк" /></li>
             <li><img src="images/content/domclick.svg" alt="Домклик" /></li>
             <li><img src="images/content/skyeng.svg" alt="Skyeng" /></li>
             <li><img src="images/content/joom.svg" alt="Joom" /></li>
             <li><img src="images/content/ozon.svg" alt="Ozon" /></li>
             <li><img src="images/content/mybook.svg" alt="MyBook" /></li>
+          </ul>
+          <ul class="marquee-content">
             <li><img src="images/content/tinkoff.svg" alt="Т-Банк" /></li>
             <li><img src="images/content/domclick.svg" alt="Домклик" /></li>
             <li><img src="images/content/skyeng.svg" alt="Skyeng" /></li>
