@@ -1,102 +1,3 @@
-/*!*********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/lite-youtube-embed/src/lite-yt-embed.css ***!
-  \*********************************************************************************************************/
-lite-youtube {
-    background-color: #000;
-    position: relative;
-    display: block;
-    contain: content;
-    background-position: center center;
-    background-size: cover;
-    cursor: pointer;
-    max-width: 720px;
-}
-
-/* gradient */
-lite-youtube::before {
-    content: attr(data-title);
-    display: block;
-    position: absolute;
-    top: 0;
-    /* Pixel-perfect port of YT's gradient PNG, using https://github.com/bluesmoon/pngtocss plus optimizations */
-    background-image: linear-gradient(180deg, rgb(0 0 0 / 67%) 0%, rgb(0 0 0 / 54%) 14%, rgb(0 0 0 / 15%) 54%, rgb(0 0 0 / 5%) 72%, rgb(0 0 0 / 0%) 94%);
-    height: 99px;
-    width: 100%;
-    font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
-    color: hsl(0deg 0% 93.33%);
-    text-shadow: 0 0 2px rgba(0,0,0,.5);
-    font-size: 18px;
-    padding: 25px 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    box-sizing: border-box;
-}
-
-lite-youtube:hover::before {
-    color: white;
-}
-
-/* responsive iframe with a 16:9 aspect ratio
-    thanks https://css-tricks.com/responsive-iframes/
-*/
-lite-youtube::after {
-    content: "";
-    display: block;
-    padding-bottom: calc(100% / (16 / 9));
-}
-lite-youtube > iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0;
-}
-
-/* play button */
-lite-youtube > .lty-playbtn {
-    display: block;
-    /* Make the button element cover the whole area for a large hover/click target… */
-    width: 100%;
-    height: 100%;
-    /* …but visually it's still the same size */
-    background: no-repeat center/68px 48px;
-    /* YT's actual play button svg */
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 68 48\"><path d=\"M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z\" fill=\"red\"/><path d=\"M45 24 27 14v20\" fill=\"white\"/></svg>");
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
-    filter: grayscale(100%);
-    transition: filter .1s cubic-bezier(0, 0, 0.2, 1);
-    border: 0;
-}
-
-lite-youtube:hover > .lty-playbtn,
-lite-youtube .lty-playbtn:focus {
-    filter: none;
-}
-
-/* Post-click styles */
-lite-youtube.lyt-activated {
-    cursor: unset;
-}
-lite-youtube.lyt-activated::before,
-lite-youtube.lyt-activated > .lty-playbtn {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.lyt-visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-
 /*!******************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
   \******************************************************************************************************************************************************/
@@ -369,7 +270,7 @@ input {
 @media (max-width: 1024px) {
   .header__wrapper {
     border-bottom: 1px solid #303030;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
   }
 }
 .header__logo {
@@ -485,7 +386,7 @@ input {
 }
 @media (max-width: 768px) {
   .header {
-    padding: 13px 13px 16px;
+    padding: 13px 13px 0;
   }
 }
 
@@ -1123,6 +1024,7 @@ input {
   margin: 0;
   color: #707070;
   font-size: 22px;
+  line-height: 100%;
   border-radius: 10px;
 }
 .services .tab-button.active {
@@ -1231,6 +1133,11 @@ input {
         flex-wrap: wrap;
   }
 }
+@media (max-width: 768px) {
+  .map .container {
+    gap: 24px;
+  }
+}
 .map__left {
   position: relative;
   max-width: 965px;
@@ -1240,6 +1147,11 @@ input {
 .map__left img {
   width: 100%;
   height: 380px;
+}
+@media (max-width: 500px) {
+  .map__left img {
+    height: 138px;
+  }
 }
 .map__left p {
   position: absolute;
@@ -1254,6 +1166,7 @@ input {
     max-width: unset;
     font-size: 13px;
     line-height: 18px;
+    margin-top: 24px;
   }
 }
 @media (max-width: 1024px) {
@@ -1293,7 +1206,13 @@ input {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
+  .map__right svg {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
   .map__right p {
+    max-width: 275px;
     font-size: 13px;
     line-height: 18px;
   }
@@ -1421,8 +1340,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(1) {
-    top: 133px;
-    left: 50px;
+    top: 16px;
+    left: 65px;
   }
 }
 .map .animated-circles:nth-of-type(2) {
@@ -1449,7 +1368,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(2) {
-    left: 40px;
+    top: 49px;
+    left: 61px;
   }
 }
 .map .animated-circles:nth-of-type(3) {
@@ -1476,8 +1396,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(3) {
-    top: 205px;
-    left: 95px;
+    top: 80px;
+    left: 105px;
   }
 }
 .map .animated-circles:nth-of-type(4) {
@@ -1504,7 +1424,7 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(4) {
-    top: 130px;
+    top: 24px;
     left: 165px;
   }
 }
@@ -1532,8 +1452,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(5) {
-    top: 165px;
-    left: 212px;
+    top: 45px;
+    left: 208px;
   }
 }
 .map .animated-circles:nth-of-type(6) {
@@ -1559,8 +1479,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(6) {
-    top: 138px;
-    left: 265px;
+    top: 21px;
+    left: 225px;
   }
 }
 .map .animated-circles:nth-of-type(7) {
@@ -1586,8 +1506,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(7) {
-    top: 115px;
-    left: 265px;
+    top: 5px;
+    left: 250px;
   }
 }
 .map .animated-circles:nth-of-type(8) {
@@ -1613,8 +1533,8 @@ input {
 }
 @media (max-width: 500px) {
   .map .animated-circles:nth-of-type(8) {
-    top: 155px;
-    left: 270px;
+    top: 35px;
+    left: 260px;
   }
 }
 @media (max-width: 768px) {
@@ -1662,7 +1582,7 @@ input {
   line-height: 22px;
 }
 .awards__list .swiper-slide div:nth-child(2) {
-  width: 238px;
+  width: 50%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1918,14 +1838,16 @@ input {
   font-size: 22px;
   line-height: 30px;
 }
-.reviews-swiper-1 .swiper-slide span {
+.reviews-swiper-1 .swiper-slide p > span {
   display: inline-block;
   background-color: #303030;
-  border-radius: 24px;
-  padding: 0px 24px 8px;
+  border-radius: 16px;
+  padding: 8px 18px 14px;
+  font-size: 40px;
+  line-height: 100%;
 }
 @media (max-width: 500px) {
-  .reviews-swiper-1 .swiper-slide span {
+  .reviews-swiper-1 .swiper-slide p > span {
     border-radius: 10px;
     padding: 0 13px 8px;
   }
@@ -1944,8 +1866,6 @@ input {
   text-align: center;
   font-size: 16px;
   line-height: 22px;
-  color: #F6F6F6;
-  background-color: #303030;
   border-radius: 14px;
 }
 @media (max-width: 1300px) {
@@ -2305,6 +2225,7 @@ input {
           align-items: center;
 }
 .offer__item p {
+  font-family: "Manrope-Regular";
   font-size: 30px;
   line-height: 40px;
   color: #F6F6F6;
@@ -2324,8 +2245,6 @@ input {
           box-sizing: border-box;
   height: 57px;
   border-radius: 18px;
-  background-color: #F6F6F6;
-  color: #E95414 !important;
   font-size: 24px;
   white-space: nowrap;
   line-height: 30px;
@@ -3575,6 +3494,7 @@ input {
       flex-shrink: 0;
   border-radius: 14px;
   background-color: #E95414;
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -4157,6 +4077,13 @@ b {
 .button:visited {
   color: unset;
 }
+.button--white {
+  background-color: #F6F6F6;
+  color: #E95414 !important;
+}
+.button--white:hover, .button--white:focus, .button--white:active {
+  background-color: #EAFEDA !important;
+}
 .button--orange {
   background-color: #E95414;
 }
@@ -4167,61 +4094,35 @@ b {
   background-color: #303030;
   color: #F6F6F6 !important;
   overflow: hidden;
-  -webkit-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
+  -webkit-transition: all 0.45s ease-Out;
+  transition: all 0.45s ease-Out;
 }
-.button--gray span {
-  position: relative;
-}
-.button--gray::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: #E95414;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
+.button--gray #circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
   border-radius: 50%;
-  z-index: -1;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  background: #E95414;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-Out;
+  transition: all 0.5s ease-Out;
+  top: 20px;
+  left: 150px;
 }
 .button--gray:hover {
   background-color: unset !important;
 }
-.button--gray:hover::before {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-}
-.button--gray::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background-color: #E95414;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -1;
-  -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  opacity: 0;
-}
-.button--gray:hover::after {
-  width: 300%;
-  height: 300%;
+.button--gray:hover #circle {
+  width: 200%;
+  height: 500%;
   opacity: 1;
+  top: -70px;
+  left: -155px;
 }
-.button--gray:not(:hover)::after {
-  width: 0;
-  height: 0;
-  opacity: 0;
+.button--gray span {
+  position: relative;
+  z-index: 2;
 }
 .button--green {
   font-size: 16px;
@@ -4234,7 +4135,6 @@ b {
   color: #1D1D1D;
 }
 
-/* Trigger div styling */
 .trigger-div {
   cursor: pointer;
   padding: 10px 20px;
@@ -4244,9 +4144,8 @@ b {
   border-radius: 5px;
 }
 
-/* Popup styling */
 .popup {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -4275,6 +4174,16 @@ b {
   border-radius: 24px;
   min-width: 865px;
 }
+@media (max-width: 768px) {
+  .popup-content {
+    min-width: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+  }
+}
 
 .popup-left {
   max-width: 320px;
@@ -4284,9 +4193,20 @@ b {
   line-height: 40px;
   margin-bottom: 25px;
 }
+@media (max-width: 768px) {
+  .popup-left h2 {
+    margin-bottom: 16px;
+  }
+}
 .popup-left p {
   font-size: 16px;
   line-height: 24px;
+}
+@media (max-width: 768px) {
+  .popup-left {
+    max-width: unset;
+    text-align: center;
+  }
 }
 
 .popup-right {
@@ -4310,6 +4230,16 @@ b {
 }
 .popup-right input {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .popup-right input {
+    max-width: unset;
+  }
+}
+@media (max-width: 768px) {
+  .popup-right {
+    max-width: unset;
+  }
 }
 
 .close-popup {
