@@ -1229,11 +1229,6 @@ input {
 }
 @media (max-width: 1200px) {
   .map__right {
-    max-width: 250px;
-  }
-}
-@media (max-width: 768px) {
-  .map__right {
     width: 100%;
     max-width: unset;
     position: relative;
@@ -1244,13 +1239,19 @@ input {
         -ms-flex-align: center;
             align-items: center;
     padding: 0;
+    padding-left: 13px;
     gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .map__right {
+    padding: 0;
   }
 }
 .map__right svg {
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .map__right svg {
     margin: 0;
   }
