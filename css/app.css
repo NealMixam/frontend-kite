@@ -357,6 +357,7 @@ input {
   font-size: 12px;
   line-height: 20px;
   padding: 4px 10px;
+  border-radius: 14px;
   background-color: #E95414;
   min-height: unset;
   height: 32px;
@@ -2189,6 +2190,7 @@ input {
     padding: 12px;
     font-size: 13px;
     line-height: 18px;
+    border-radius: 10px;
   }
 }
 @media (max-width: 1024px) {
@@ -2787,6 +2789,12 @@ input {
   padding: 0 30px 140px;
   padding-right: 0;
 }
+@media (min-width: 1440px) {
+  .public {
+    max-width: unset !important;
+    margin-left: calc(50% - 720px) !important;
+  }
+}
 .public__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2960,7 +2968,7 @@ input {
   margin: 0;
 }
 .public .swiper .swiper-slide {
-  max-width: 520px;
+  width: 520px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2974,6 +2982,7 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  will-change: transform;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2982,6 +2991,17 @@ input {
   border: 1px solid transparent;
   -webkit-transition: border 0.6s;
   transition: border 0.6s;
+}
+@media (max-width: 1024px) {
+  .public .swiper .swiper-slide {
+    width: auto !important;
+    max-width: 520px;
+  }
+}
+@media (max-width: 500px) {
+  .public .swiper .swiper-slide .swiper-slide {
+    width: 320px !important;
+  }
 }
 .public .swiper .swiper-slide:hover {
   border: 1px solid #fff;
@@ -3072,7 +3092,7 @@ input {
 @media (max-width: 500px) {
   .public .swiper .swiper-slide {
     min-height: 360px;
-    max-width: 320px;
+    width: 320px !important;
   }
 }
 .public .swiper .swiper-controls {
@@ -3557,6 +3577,7 @@ input {
 }
 @media (max-width: 500px) {
   .footer__list > li:nth-child(1) {
+    max-width: 250px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -3567,6 +3588,7 @@ input {
             order: 3;
   }
   .footer__list > li:nth-child(3) {
+    max-width: 82px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -3865,16 +3887,16 @@ input {
     top: 69px;
   }
 }
-#menu.overlay > a {
+#menu > a {
   width: 100%;
   max-width: 350px;
   height: 45px;
 }
-#menu.overlay > a:hover {
+#menu > a:hover {
   background-color: #303030;
   color: #fff;
 }
-#menu.overlay > a:hover svg {
+#menu > a:hover svg {
   bottom: -4px;
 }
 #menu ul {
@@ -4253,8 +4275,13 @@ b {
   outline: none;
   white-space: nowrap;
   cursor: pointer;
-  -webkit-transition: background, color 0.6s;
-  transition: background, color 0.6s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+@media (max-width: 500px) {
+  .button {
+    border-radius: 10px;
+  }
 }
 .button:visited {
   color: unset;
@@ -4269,6 +4296,9 @@ b {
 .button--orange {
   background-color: #E95414;
 }
+.button--orange:hover, .button--orange:focus, .button--orange:active {
+  background-color: #303030;
+}
 .button--gray {
   font-size: 16px;
   line-height: 22px;
@@ -4281,8 +4311,11 @@ b {
   background-color: unset !important;
 }
 .button--gray:hover::before {
+  width: 110%;
+  height: 110%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 .button--gray:active {
   opacity: 0.8;
@@ -4292,15 +4325,36 @@ b {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 110%;
-  height: 110%;
+  width: 10px;
+  height: 10px;
   background-color: #E95414;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  border-radius: 7px;
+  -webkit-transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease, width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.6s ease, width 0.6s ease, height 0.6s ease, opacity 0.6s ease, -webkit-transform 0.6s ease;
+  border-radius: 50px;
   z-index: 1;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+.button--gray:hover::before {
+  width: 110%;
+  height: 110%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.button--gray:not(:hover)::before {
+  width: 10px;
+  height: 10px;
+  -webkit-transform: translate(-50%, -50%) scale(0.2);
+          transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0;
+  -webkit-transition: width 0.6s ease 0.6s, height 0.6s ease 0.6s, opacity 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
+  transition: width 0.6s ease 0.6s, height 0.6s ease 0.6s, opacity 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
+  transition: width 0.6s ease 0.6s, height 0.6s ease 0.6s, transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s;
+  transition: width 0.6s ease 0.6s, height 0.6s ease 0.6s, transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
 }
 .button--gray span {
   position: relative;
@@ -4312,9 +4366,8 @@ b {
   background-color: #EAFEDA;
   color: #E95414;
 }
-.button:hover, .button:focus, .button:active {
-  background: #fff;
-  color: #1D1D1D;
+.button--green:hover, .button--green:focus, .button--green:active {
+  background-color: #303030;
 }
 
 .trigger-div {
