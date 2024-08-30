@@ -810,7 +810,7 @@ input {
   height: 274px;
   background-color: #303030;
   right: -157px;
-  top: -12px;
+  top: 4px;
 }
 @media (max-width: 1400px) {
   .hero__title::after {
