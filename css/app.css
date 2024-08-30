@@ -710,7 +710,6 @@ input {
   .hero__main > div p {
     max-width: 315px;
     font-size: 22px;
-    padding-right: 35px;
     line-height: 30px;
     margin: 16px 0;
   }
