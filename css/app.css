@@ -876,7 +876,7 @@ input {
   gap: 24px;
 }
 .services__top > div > p {
-  max-width: 500px;
+  max-width: 460px;
   font-size: 30px;
   font-family: "Manrope-Regular";
   line-height: 40px;
@@ -918,6 +918,10 @@ input {
 }
 .services__people--1 {
   display: block;
+}
+.services__people--1 p {
+  font-size: 16px;
+  line-height: 24px;
 }
 @media (max-width: 768px) {
   .services__people--1 {
@@ -1019,6 +1023,7 @@ input {
   content: counter(service, decimal-leading-zero);
 }
 .services__list > li > p {
+  font-family: "Manrope-Medium";
   font-size: 30px;
   line-height: 30px;
 }
@@ -1059,6 +1064,7 @@ input {
   color: #707070;
 }
 .services__list > li > ul > li > a > p {
+  font-family: "Manrope-Regular";
   max-width: 430px;
 }
 .services__list > li > ul > li > a > div {
@@ -1387,9 +1393,12 @@ input {
   height: 100%;
 }
 .map__left p {
+  font-family: "IBMPlexMono-Regular";
   position: absolute;
   left: 30px;
   bottom: 0;
+  font-size: 16px;
+  line-height: 24px;
   max-width: 345px;
 }
 @media (max-width: 1200px) {
@@ -1438,6 +1447,11 @@ input {
           flex-direction: column;
   gap: 20px;
 }
+.map__right > div p {
+  font-family: "Manrope-Regular";
+  font-size: 16px;
+  line-height: 24px;
+}
 @media (max-width: 1200px) {
   .map__right > div {
     -webkit-box-orient: horizontal;
@@ -1473,14 +1487,8 @@ input {
   }
 }
 .map__right svg {
-  margin-bottom: 20px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-}
-@media (max-width: 1200px) {
-  .map__right svg {
-    margin: 0;
-  }
 }
 @media (max-width: 768px) {
   .map__right p {
@@ -2473,7 +2481,7 @@ input {
 }
 .reviews__top div p:nth-child(1) {
   max-width: 520px;
-  font-family: "Manrope-Medium";
+  font-family: "Manrope-Regular";
   font-size: 30px;
   line-height: 40px;
 }
@@ -2495,6 +2503,12 @@ input {
     font-size: 13px;
     line-height: 18px;
     color: #707070;
+    padding-right: 90px;
+  }
+}
+@media (max-width: 370px) {
+  .reviews__top div p:nth-child(2) {
+    padding-right: 50px;
   }
 }
 @media (max-width: 1024px) {
@@ -2940,6 +2954,7 @@ input {
   }
 }
 .reviews-swiper-2 .swiper-slide__content p:nth-child(2) {
+  max-width: 520px;
   font-family: "Manrope-Regular";
   font-size: 16px;
   line-height: 24px;
@@ -3351,6 +3366,7 @@ input {
 }
 @media (max-width: 500px) {
   .agency__top div p:nth-child(1) {
+    font-family: "Manrope-Regular";
     font-size: 22px;
     line-height: 30px;
   }
@@ -3520,6 +3536,7 @@ input {
   max-width: 520px;
 }
 .agency__item > div:nth-child(2) h3 {
+  font-family: "Manrope-Medium";
   display: inline-block;
   font-size: 30px;
   line-height: 100%;
@@ -3735,6 +3752,7 @@ input {
 }
 @media (max-width: 500px) {
   .public__top p {
+    font-family: "Manrope-Regular";
     font-size: 22px;
     line-height: 30px;
   }
@@ -3976,6 +3994,7 @@ input {
   font-family: "Manrope-Regular";
   font-size: 30px;
   line-height: 36px;
+  letter-spacing: -1px;
 }
 @media (max-width: 1024px) {
   .public .swiper .swiper-slide__content p:nth-child(2) {
@@ -4200,6 +4219,7 @@ input {
   border-radius: 2px;
 }
 .proposal__form input {
+  font-family: "Manrope-Medium";
   width: 50%;
   max-width: 345px;
   height: 52px;
@@ -4209,6 +4229,8 @@ input {
           box-sizing: border-box;
   border-radius: 18px;
   border: none;
+  color: #FCA27B;
+  font-size: 16px;
 }
 .proposal__form input::-webkit-input-placeholder {
   font-size: 16px;
@@ -4308,6 +4330,7 @@ input {
 }
 @media (max-width: 500px) {
   .events__text > p {
+    font-family: "Manrope-Regular";
     max-width: unset;
     font-size: 22px;
     line-height: 30px;
@@ -4397,6 +4420,7 @@ input {
 }
 @media (max-width: 600px) {
   .events__list > li div {
+    max-height: 73px;
     border-radius: 10px;
   }
 }
@@ -5464,6 +5488,7 @@ b {
   font-size: 30px;
   line-height: 40px;
   margin-bottom: 25px;
+  color: #f6f6f6;
 }
 @media (max-width: 992px) {
   .popup-left h2 {
@@ -5508,7 +5533,7 @@ b {
 }
 .popup-right input {
   width: 100%;
-  font-family: "IBMPlexMono-Regular";
+  font-family: "Manrope-Medium";
   font-size: 16px;
   line-height: 100%;
   color: #E95414;
